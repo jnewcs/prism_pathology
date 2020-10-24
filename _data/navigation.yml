@@ -1,0 +1,15 @@
+---
+- title: Home
+  url: /home
+
+- title: Services
+  url: /home/services
+
+- title: Research
+  url: /home/research
+
+- title: About
+  url: /home/about
+
+- title: Contact
+  url: /home/contact

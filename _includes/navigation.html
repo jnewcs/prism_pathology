@@ -1,0 +1,35 @@
+{% assign current_url = page.url | remove:'index.html' %}
+
+<header id="header">
+  <nav class="navbar navbar-expand-lg navbar-light" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <button type="button" class="navbar-toggle" id="navbar-toggle" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-brand">
+      <div class="logo-container">
+        <div class="logo-large text-center">
+          <a href="/home">{{ site.title }}</a>
+        </div>
+      </div>
+      <div class="logo-separator"></div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav w-100 text-center">
+        {% for link in site.data.navigation %}
+          <li>
+            <a
+              href="{{ link.url | relative_url }}"
+              class="nav-link {% if current_url contains link.url %}light-blue-text{% endif %}"
+            >
+              {{ link.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+</header>

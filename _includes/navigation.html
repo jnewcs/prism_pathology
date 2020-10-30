@@ -13,7 +13,11 @@
           <a href="/home">{{ site.title }}</a>
         </div>
       </div>
-      <div class="logo-separator"></div>
+      <div
+        class="logo-separator"
+        style="background-image: url('{{ site.logo | relative_url }}');"
+      >
+      </div>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

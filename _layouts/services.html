@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="container-special">
+  <h1 class="light-blue-text text-center mt-3">{{ page.header }}</h1>
+  <p class="text-center mb-4">
+    {{ page.description }}
+  </p>
+
+  {% include search.html %}
+
+  <h2 class="text-center mt-3 mb-5">
+    Browse the categories to learn more about our capabilities.
+  </h2>
+
+  {% include no_selection_categories.html %}
+</div>

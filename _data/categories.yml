@@ -1,0 +1,288 @@
+---
+- name: "Breast Cancer"
+  page: 1
+  services:
+    - name: "her2 amplification by fish"
+      methodology: "HER2 IQFISH pharmDxTM, fluorescence in situ hybridization (FISH)"
+      requirements: "Formalin fixed, paraffin embedded (FFPE) tissue block or 3 unstained, 4 μm thick sections on positively charged slides. 6 - 72 hours fixation recommended as per CAP-ASCO guidelines for breast cancer. Decalcified tissue is not appropriate for FISH testing"
+      storage: "Room Temperature"
+      cpt_code: "88377"
+      time: "1-2 Days"
+      sub: 1
+
+- name: "Colon Cancer"
+  page: 2
+  services:
+    - name: "kras mutation analysis by pcr"
+      methodology: "Therascreen KRAS RGQ PCR, Real-time Polymerase Chain Reaction (PCR)"
+      requirements: "Formalin-fixed, paraffin-embedded (FFPE) tissues or 5-7 unstained, 7 µm sections on regular slides. Decalcified tissue is not appropriate for PCR testing"
+      storage: "Room Temperature"
+      cpt_code: "81275"
+      time: "5-7 Days"
+      sub: 1
+
+    - name: "egfr mutation analysis by pcr"
+      methodology: "Therascreen KRAS RGQ PCR, Real-time Polymerase Chain Reaction (PCR)"
+      requirements: "Formalin-fixed, paraffin-embedded (FFPE) tissues or 5-7 unstained, 7 µm sections on regular slides. Decalcified tissue is not appropriate for PCR testing"
+      storage: "Room Temperature"
+      cpt_code: "81235"
+      time: "5 Days"
+      sub: 2
+
+    - name: "braf v600 mutation analysis by pcr"
+      methodology: "Real-time Polymerase Chain Reaction (PCR)"
+      requirements: "Formalin-fixed, paraffin-embedded (FFPE) tissues or 5-7 unstained, 7 µm sections on regular slides. Decalcified tissue is not appropriate for PCR testing"
+      storage: "Room Temperature"
+      cpt_code: "81210"
+      time: "3-5 Days"
+      sub: 3
+
+    - name: "microsatellite instability (msi) by pcr"
+      methodology: "Real-time Polymerase Chain Reaction (PCR)"
+      requirements: "Formalin-fixed, paraffin-embedded (FFPE) tissues (tumor and normal tissue) or 5 unstained slides with tumor and normal tissue, 7 µm thick sections. The tissue should have at least 25 percent tumor cells. Decalcified tissue is not appropriate for PCR testing"
+      storage: "Room Temperature"
+      cpt_code: "81301"
+      time: "3-5 Days"
+      sub: 4
+
+- name: "Gastric Cancer"
+  page: 3
+  services:
+    - name: "her2 amplification by fish"
+      methodology: "HER2 IQFISH pharmDxTM, fluorescence in situ hybridization (FISH)"
+      requirements: "Formalin fixed, paraffin embedded (FFPE) tissue block or 3 unstained, 4 μm thick sections on positively charged slides. 6 - 72 hours fixation recommended as per CAP-ASCO guidelines for breast cancer. Decalcified tissue is not appropriate for FISH testing"
+      storage: "Room Temperature"
+      cpt_code: "88377"
+      time: "1-2 Days"
+      sub: 1
+
+- name: "Lung Cancer"
+  page: 4
+  services:
+    - name: "alk rearrangement by fish"
+      methodology: "Fluorescence in situ hybridization (FISH)"
+      requirements: "Formalin fixed, paraffin embedded (FFPE) tissue block or 3 unstained 4 µm thick sections on positively charged slides. Decalcified tissue is not appropriate for FISH testing"
+      storage: "Room Temperature or Refrigerated"
+      cpt_code: "88377"
+      time: "1-2 Days"
+      sub: 1
+
+    - name: "egfr mutation analysis by pcr"
+      methodology: "Therascreen KRAS RGQ PCR, Real-time Polymerase Chain Reaction (PCR)"
+      requirements: "Formalin fixed, paraffin embedded (FFPE) tissue block or 3 unstained 4 µm thick sections on positively charged slides. Decalcified tissue is not appropriate for FISH testing"
+      storage: "Room Temperature"
+      cpt_code: "81235"
+      time: "5 Days"
+      sub: 2
+
+    - name: "kras mutation analysis by pcr"
+      methodology: "Therascreen KRAS RGQ PCR, Real-time Polymerase Chain Reaction (PCR)"
+      requirements: "Formalin-fixed, paraffin-embedded (FFPE) tissues or 5-7 unstained, 7 µm sections on regular slides. Decalcified tissue is not appropriate for PCR testing."
+      storage: "Room Temperature"
+      cpt_code: "81275"
+      time: "5-7 Days"
+      sub: 3
+
+- name: "Melanoma"
+  page: 5
+  services:
+    - name: "braf v600 mutation analysis by pcr"
+      methodology: "Real-time Polymerase Chain Reaction (PCR)"
+      requirements: "Formalin-fixed, paraffin-embedded (FFPE) tissues or 5-7 unstained, 7 µm sections on regular slides. Decalcified tissue is not appropriate for PCR testing."
+      storage: "Room Temperature"
+      cpt_code: "81210"
+      time: "3-5 Days"
+      sub: 1
+
+- name: "Molecular Genetic Diseases"
+  page: 6
+  services:
+    - name: "factor 5 leiden mutation analysis by pcr"
+      methodology: "Polymerase Chain Reaction (PCR)"
+      requirements: "Whole blood in EDTA (lavender) or ACD (yellow) tube; 3 mL (minimum 1 mL). Heparinized, clotted or frozen samples are unacceptable"
+      storage: "Room temperature: 72 hours. Refrigerated: 1 week"
+      cpt_code: "81241"
+      time: "3-5 Days"
+      sub: 1
+
+    - name: "factor 2 pt 20210 mutation analysis by pcr"
+      methodology: "Polymerase Chain Reaction (PCR)"
+      requirements: "Whole blood in EDTA (lavender) or ACD (yellow) tube; 3 mL (minimum 1 mL). Heparinized, clotted or frozen samples are unacceptable"
+      storage: "Room temperature: 72 hours. Refrigerated: 1 week"
+      cpt_code: "81240"
+      time: "3-5 Days"
+      sub: 2
+
+    - name: "hemochromatosis (hfe) mutation analysis by pcr"
+      methodology: "Polymerase Chain Reaction (PCR)"
+      requirements: "Whole blood in EDTA (lavender) or ACD (yellow) tube; 3 mL (minimum 1 mL). Heparinized, clotted or frozen samples are unacceptable"
+      storage: "Room temperature: 72 hours. Refrigerated: 1 week"
+      cpt_code: "81256"
+      time: "3-5 Days"
+      sub: 3
+
+    - name: "mthfr mutation analysis by pcr"
+      methodology: "Polymerase Chain Reaction (PCR)"
+      requirements: "Whole blood in EDTA (lavender) or ACD (yellow) tube; 3 mL (minimum 1 mL). Heparinized, clotted or frozen samples are unacceptable"
+      storage: "Room temperature: 72 hours. Refrigerated: 1 week"
+      cpt_code: "81291"
+      time: "3-5 Days"
+      sub: 4
+
+- name: "Hematologic Neoplasms"
+  page: 7
+  services:
+    - name: "igh/ccnd1 (bcl1, t(11;14)) by fish"
+      methodology: "Fluorescence in situ hybridization (FISH)"
+      requirements: "Formalin fixed, paraffin embedded (FFPE) tissue block or 3 unstained 4 µm thick sections on positively charged slides. Whole blood in sodium heparin (green) tube; 5 mL (minimum 1 mL). Bone marrow in sodium heparin (green) tube; 2 mL (minimum 1 mL). Decalcified tissue is not appropriate for FISH testing. Clotted or frozen samples are unacceptable"
+      storage: "Room temperature: 72 hours. Refrigerated: 4 days for blood and bone marrow samples. Room temperature for FFPE samples."
+      cpt_code: "88377"
+      time: "2-3 Days"
+      sub: 1
+
+    - name: "igh/bcl2, t(14;18)) by fish"
+      methodology: "Fluorescence in situ hybridization (FISH)"
+      requirements: "Formalin fixed, paraffin embedded (FFPE) tissue block or 3 unstained 4 µm thick sections on positively charged slides. Whole blood in sodium heparin (green) tube; 5 mL (minimum 1 mL). Bone marrow in sodium heparin (green) tube; 2 mL (minimum 1 mL). Decalcified tissue is not appropriate for FISH testing. Clotted or frozen samples are unacceptable"
+      storage: "Room temperature: 72 hours. Refrigerated: 4 days for blood and bone marrow samples. Room temperature for FFPE samples."
+      cpt_code: "88377"
+      time: "2-3 Days"
+      sub: 2
+
+    - name: "bcl6 3q27 rearrangement by fish"
+      methodology: "Fluorescence in situ hybridization (FISH)"
+      requirements: "Formalin fixed, paraffin embedded (FFPE) tissue block or 3 unstained 4 µm thick sections on positively charged slides. Whole blood in sodium heparin (green) tube; 5 mL (minimum 1 mL). Bone marrow in sodium heparin (green) tube; 2 mL (minimum 1 mL). Decalcified tissue is not appropriate for FISH testing. Clotted or frozen samples are unacceptable"
+      storage: "Room temperature: 72 hours. Refrigerated: 4 days for blood and bone marrow samples. Room temperature for FFPE samples."
+      cpt_code: "88377"
+      time: "2-3 Days"
+      sub: 3
+
+    - name: "myc 8q24 rearrangement by fish"
+      methodology: "Fluorescence in situ hybridization (FISH)"
+      requirements: "Formalin fixed, paraffin embedded (FFPE) tissue block or 3 unstained 4 µm thick sections on positively charged slides. Whole blood in sodium heparin (green) tube; 5 mL (minimum 1 mL). Bone marrow in sodium heparin (green) tube; 2 mL (minimum 1 mL). Decalcified tissue is not appropriate for FISH testing. Clotted or frozen samples are unacceptable"
+      storage: "Room temperature: 72 hours. Refrigerated: 4 days for blood and bone marrow samples. Room temperature for FFPE samples."
+      cpt_code: "88377"
+      time: "2-3 Days"
+      sub: 4
+
+    - name: "igh/myc, t(8;14) by fish"
+      methodology: "Fluorescence in situ hybridization (FISH)"
+      requirements: "Formalin fixed, paraffin embedded (FFPE) tissue block or 3 unstained 4 µm thick sections on positively charged slides. Whole blood in sodium heparin (green) tube; 5 mL (minimum 1 mL). Bone marrow in sodium heparin (green) tube; 2 mL (minimum 1 mL). Decalcified tissue is not appropriate for FISH testing. Clotted or frozen samples are unacceptable"
+      storage: "Room temperature: 72 hours. Refrigerated: 4 days for blood and bone marrow samples. Room temperature for FFPE samples."
+      cpt_code: "88377"
+      time: "2-3 Days"
+      sub: 5
+
+    - name: "b-cell lymphoma fish panel (bcl2, bcl6 and myc)"
+      methodology: "Fluorescence in situ hybridization (FISH)"
+      requirements: "Formalin fixed, paraffin embedded (FFPE) tissue block or 3 unstained 4 µm thick sections on positively charged slides. Whole blood in sodium heparin (green) tube; 5 mL (minimum 1 mL). Bone marrow in sodium heparin (green) tube; 2 mL (minimum 1 mL). Decalcified tissue is not appropriate for FISH testing. Clotted or frozen samples are unacceptable"
+      storage: "Room temperature: 72 hours. Refrigerated: 4 days for blood and bone marrow samples. Room temperature for FFPE samples."
+      cpt_code: "88368 x 6"
+      time: "2-3 Days"
+      sub: 6
+
+    - name: "bcr/abl, t(9;22) by fish"
+      methodology: "Fluorescence in situ hybridization (FISH)"
+      requirements: "Whole blood in sodium heparin (green) tube; 5 mL (minimum 1 mL). Bone marrow in sodium heparin (green) tube; 2 mL (minimum 1 mL)"
+      storage: "Room temperature: 48 hours. Refrigerated: 4 days"
+      cpt_code: "88377"
+      time: "2-3 Days"
+      sub: 7
+
+    - name: "pml/rara, t(15;17) by fish"
+      methodology: "Fluorescence in situ hybridization (FISH)"
+      requirements: "Whole blood in sodium heparin (green) tube; 5 mL (minimum 1 mL). Bone marrow in sodium heparin (green) tube; 2 mL (minimum 1 mL)"
+      storage: "Room temperature: 48 hours. Refrigerated: 4 days"
+      cpt_code: "88377"
+      time: "1 Day"
+      sub: 8
+
+    - name: "b-cell receptor gene rearrangement by pcr"
+      methodology: "Polymerase Chain Reaction (PCR)"
+      requirements: "Formalin-fixed, paraffin-embedded (FFPE) tissues or 5-7 unstained slides, 7 µm thick sections. Whole blood in EDTA (lavender) or ACD (yellow) tube; 3 mL (minimum 1 mL). Decalcified tissue is not appropriate for FISH testing. Clotted or frozen samples are unacceptable"
+      storage: "Room temperature: 48 hours. Refrigerated: 4 days"
+      cpt_code: "81261"
+      time: "2-3 Days"
+      sub: 9
+
+    - name: "t-cell receptor gene rearrangement by pcr"
+      methodology: "Polymerase Chain Reaction (PCR)"
+      requirements: "Formalin-fixed, paraffin-embedded (FFPE) tissues or 5-7 unstained slides, 7 µm thick sections. Whole blood in EDTA (lavender) or ACD (yellow) tube; 3 mL (minimum 1 mL). Decalcified tissue is not appropriate for FISH testing. Clotted or frozen samples are unacceptable"
+      storage: "Room temperature: 48 hours. Refrigerated: 4 days"
+      cpt_code: "81242"
+      time: "2-3 Days"
+      sub: 10
+
+    - name: "jak2 mutation analysis by fish"
+      methodology: "Fluorescence in situ hybridization (FISH)"
+      requirements: "Whole blood in sodium heparin (green) tube; 5 mL (minimum 1 mL). Bone marrow in sodium heparin (green) tube; 2 mL (minimum 1 mL)"
+      storage: "Room temperature: 48 hours. Refrigerated: 4 days"
+      cpt_code: "81270"
+      time: "2-3 Days"
+      sub: 11
+
+- name: "Molecular Infectious Diseases"
+  page: 8
+  services:
+    - name: "adenovirus, quantitative real-time pcr"
+      methodology: "Polymerase Chain Reaction (PCR)"
+      requirements: "Whole blood in EDTA (lavender); 5 mL (minimum 2 mL). Bronchoalveolar lavage (BAL); 1 mL (minimum 0.5 mL). Nasopharyngeal swab in viral transport media. Heparinized, clotted or frozen samples are unacceptable"
+      storage: "Room temperature: 48 hours. Refrigerated: 4 days"
+      cpt_code: "87799"
+      time: "1-2 Days"
+      sub: 1
+
+    - name: "bk virus, quantitative real-time pcr"
+      methodology: "Polymerase Chain Reaction (PCR)"
+      requirements: "Whole blood in EDTA (lavender); 5 mL (minimum 2 mL). Urine in sterile container; 1 mL (minimum 0.5 mL)"
+      storage: "Room temperature: 48 hours. Refrigerated: 4 days"
+      cpt_code: "87799"
+      time: "1-2 Days"
+      sub: 2
+
+    - name: "cytomegalovirus (cmv), quantitative real-time pcr"
+      methodology: "Polymerase Chain Reaction (PCR)"
+      requirements: "Whole blood in EDTA (lavender); 5 mL (minimum 2 mL). Plasma; 1 mL (minimum 0.5 mL). Urine in sterile container; 1 mL (minimum 0.5 mL). Bronchoalveolar lavage (BAL); 1 mL (minimum 0.5 mL). Cerebrospinal fluid (CSF); 1 mL (minimum 0.5 mL). Formalin-fixed, paraffin-embedded (FFPE) tissues or 5-7 unstained, 7 µm sections on regular slides"
+      storage: "Room temperature: 48 hours. Refrigerated: 4 days for bloos samples, urine, and BAL. Frozen for plasma and CSF. Room Temperature for FFPE samples"
+      cpt_code: "87496"
+      time: "1-2 Days"
+      sub: 3
+
+    - name: "human herpes simplex virus (hsv1/hsv2), quantitative real-time pcr"
+      methodology: "Polymerase Chain Reaction (PCR)"
+      requirements: "Whole blood in EDTA (lavender); 5 mL (minimum 1 mL). Urine in sterile container; 1 mL (minimum 0.5 mL). Cerebrospinal fluid (CSF); 1 mL (minimum 0.5 mL). Lesion swab in viral transport media"
+      storage: "Room temperature: 48 hours. Refrigerated: 4 days for blood, urine and swabs. Frozen for CSF"
+      cpt_code: "87529"
+      time: "1-2 Days"
+      sub: 4
+
+    - name: "epstein-barr virus (ebv), quantitative real-time pcr"
+      methodology: "Polymerase Chain Reaction (PCR)"
+      requirements: "Whole blood in EDTA (lavender); 5 mL (minimum 1 mL). Cerebrospinal fluid (CSF); 1 mL (minimum 0.5 mL). Formalin-fixed, paraffin-embedded (FFPE) tissues or 5-7 unstained, 7 µm sections on regular slides"
+      storage: "Room temperature: 48 hours. Refrigerated: 4 days for blood samples. Frozen for CSF. Room Temperature for FFPE samples"
+      cpt_code: "87799"
+      time: "1-2 Days"
+      sub: 5
+
+    - name: "parvovirus b19, quantitative real-time pcr"
+      methodology: "Polymerase Chain Reaction (PCR)"
+      requirements: "Whole blood in EDTA (lavender); 5 mL (minimum 1 mL)"
+      storage: "Room temperature: 48 hours. Refrigerated: 4 days for blood samples"
+      cpt_code: "87799"
+      time: "1-2 Days"
+      sub: 6
+
+    - name: "varicella-zoster virus (vzv), quantitative real-time pcr"
+      methodology: "Polymerase Chain Reaction (PCR)"
+      requirements: "Whole blood in EDTA (lavender); 5 mL (minimum 1 mL). Cerebrospinal fluid (CSF); 1 mL (minimum 0.5 mL). Lesion swab in viral transport media"
+      storage: "Room temperature: 48 hours. Refrigerated: 4 days"
+      cpt_code: "87799"
+      time: "1-2 Days"
+      sub: 7
+
+    - name: "west nile virus, quantitative real-time pcr"
+      methodology: "Polymerase Chain Reaction (PCR)"
+      requirements: "Whole blood in EDTA (lavender); 5 mL (minimum 1 mL). Cerebrospinal fluid (CSF); 1 mL (minimum 0.5 mL)"
+      storage: "Room temperature: 48 hours. Refrigerated: 4 days. Frozen for CSF"
+      cpt_code: "87799"
+      time: "1-2 Days"
+      sub: 8

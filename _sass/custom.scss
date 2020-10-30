@@ -24,7 +24,6 @@ html, body {
 }
 
 .logo-separator {
-  // background-image: "asset_url('logo2.png')";
   height: 50px;
   width: 50px;
   margin: 5px 10px;
@@ -165,19 +164,6 @@ a:focus {
   }
 }
 
-#about-image {
-  margin-top: 10px;
-  // background-image: asset_url('about-xs.png');
-}
-
-#services-image {
-  // background-image: asset_url('dna-xs.png');
-}
-
-#research-image {
-  // background-image: asset_url('research-xs.png');
-}
-
 .full-height {
   height: 100% !important;
 }
@@ -297,21 +283,6 @@ a:focus {
   }
 }
 
-#contact-picture-1 {
-  // background-image: "asset_url('Rana.jpg')";
-  margin: 13% auto;
-}
-
-#contact-picture-2 {
-  // background-image: "asset_url('Joe.jpg')";
-  margin: 18% auto;
-}
-
-#contact-picture-3 {
-  // background-image: "asset_url('Manashree.jpg')";
-  margin: 2% auto;
-}
-
 .top-info {
   border-bottom: 1px solid black;
 }
@@ -325,17 +296,6 @@ a:focus {
   .bottom-info-email {
     font-size: 17px;
   }
-}
-
-.active-title {
-  margin-bottom: 20px;
-  font-size: 35px;
-}
-
-.active-title-about {
-  padding-left: 15px;
-  margin-bottom: 10px;
-  font-size: 30px;
 }
 
 h3 {

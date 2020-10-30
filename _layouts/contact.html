@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<div class="container mb-5">
+  <h1 class="contact-header light-blue-text text-center mt-3">Contact Us</h1>
+  <div class="top-info">
+    <h2 class="text-center"><i>{{ site.phone }}</i></h2>
+  </div>
+  <div class="col-md-12 bottom-info bottom-info-email text-center">
+    <a href="mailto:{{ site.email }}">
+      {{ site.email }}
+    </a>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="text-center bottom-info"><b>Location</b></div>
+      <p class="text-center">
+          1411 N Beckley Ave.<br>Pavilion 3, Suite 174<br>Dallas, TX 75203
+      </p>
+    </div>
+    <div class="col-md-6">
+      <div class="text-center bottom-info mb-3"><b>Office Hours</b></div>
+      <p class="text-center">
+        {{ site.office_days }}
+        <br>
+        {{ site.office_hours }}
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 offset-md-3 text-center">
+      <iframe
+        src="https://www.google.com/maps/d/u/0/embed?mid=105hnTeOIFlTUnS9W2uYc2ho03vdbmFX3"
+        width="80%"
+        height="400"
+        frameborder="0"
+        style="border:0"
+      >
+      </iframe>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<h1 class="text-center light-blue-text mt-3 mb-3">
+  {{ page.header }}
+</h1>
+
+{% for person in page.people %}
+  <div class="row bio-box no-margin">
+    <div class="col-lg-3">
+      <div
+        class="contact-picture"
+        style="background-image: url('{{ person.photo | relative_url }}');"
+      >
+      </div>
+    </div>
+
+    <div class="col-lg-9">
+      <div class="bio-box">
+        <h2 class="active-title-about"><i>{{ person.name }}</i></h2>
+        <div class="bio">
+          {{ person.description }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="separator-about"></div>
+{% endfor %}

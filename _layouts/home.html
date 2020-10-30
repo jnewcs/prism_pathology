@@ -5,11 +5,11 @@ layout: default
   <div class="row">
     <div class="col-lg-6">
         <div class="test">
-          <div class="light-blue-text main-header text-center">
-            Precision in Laboratory Medicine
-          </div>
+          <h1 class="light-blue-text main-header text-center">
+            {{ page.welcome_header }}
+          </h1>
           <div class="text-center info-box">
-            Prism Pathology is a molecular pathology laboratory committed to offering rapid and accurate diagnostic and prognostic testing to help physicians and patients make precise treatment decisions.
+            {{ page.welcome_description }}
           </div>
         </div>
     </div>
@@ -17,40 +17,21 @@ layout: default
     <div class="col-lg-6">
       <!-- Test Menu & Services Section-->
       <div class="info-1 mt-5">
-        <h1 class="active-title dark-blue-text text-center"><i>How We Help</i></h1>
+        <h2 class="dark-blue-text text-center">
+          {{ page.help_header }}
+        </h2>
 
-        <div class="col-lg-12">
-          <div class="info-box text-center main-info-box">
-            Our laboratory offers a wide range of molecular pathology tests for infectious diseases, genetic diseases, hematologic neoplasms and solid tumors with fast turnaround time
-          </div>
-          <a href="/home/services" class="button-index">
-            Test Menu
-          </a>
-        </div>
-      </div>
+        {% for help in page.help_items %}
+          <div class="col-lg-12">
+            <div class="info-box text-center main-info-box">
+              {{ help.description }}
+            </div>
 
-      <!-- Research Section-->
-      <div class="info-2">
-        <div class="col-lg-12 same">
-          <div class="info-box text-center info-box-research">
-            We are committed to helping physicians and organizations develop new testing as companion diagnostics for cutting-edge therapies.
+            <a href="{{ help.link_url | relative_url }}" class="button-index">
+              {{ help.link_text }}
+            </a>
           </div>
-          <a href="/home/research" class="button-index">
-            Learn More
-          </a>
-        </div>
-      </div>
-
-      <!-- Meet Us Section-->
-      <div class="info-3">
-        <div class="col-lg-12 same">
-          <div class="info-box text-center" id="p-about">
-            Meet our professional team of highly qualified pathologists and scientists.
-          </div>
-          <a href="/home/about" class="button-index">
-            Meet Us
-          </a>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>

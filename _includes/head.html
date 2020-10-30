@@ -13,4 +13,8 @@
     rel="stylesheet"
     href="{{ '/css/main.css' | relative_url }}?{{ site.time | date: '%s%N' }}"
   />
+
+  {% if page.include_services_js %}
+    <script src="{{ '/js/services.js' | relative_url }}?{{ site.time | date: '%s%N' }}" type="text/javascript" defer></script>
+  {% endif %}
 </head>

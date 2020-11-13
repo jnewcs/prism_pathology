@@ -1,4 +1,4 @@
-{% assign current_url = page.url | remove:'index.html' %}
+{% assign current_url = page.url | remove:'.html' %}
 
 <header id="header">
   <nav class="navbar navbar-expand-lg navbar-light" role="navigation">
@@ -9,7 +9,7 @@
 
     <div class="navbar-brand">
       <div class="logo-container">
-        <div class="logo-large text-center">
+        <div class="logo-large text-center text-uppercase">
           <a href="/home">{{ site.title }}</a>
         </div>
       </div>
@@ -27,7 +27,7 @@
           <li>
             <a
               href="{{ link.url | relative_url }}"
-              class="nav-link {% if current_url contains link.url %}light-blue-text{% endif %}"
+              class="nav-link {% if current_url == link.url %}light-blue-text{% endif %}"
             >
               {{ link.title }}
             </a>

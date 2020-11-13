@@ -17,35 +17,102 @@ function generateServiceLink(category, service) {
   return `/home/services?${categoryParams}&${serviceParams}`;
 }
 
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
+}
+
+function generateServiceMatchText(service, query) {
+  const text = `${service.name.toLowerCase()} - ${service.category.name.toLowerCase()}`;
+  return text.replace(query, `<b>${query}</b>`);
+}
+
+function generateResultNumberText(number) {
+  if (number === 1) '1 Match Found';
+
+  return `${number} Matches Found`
+}
+
 // We need to load the data from Jekyll into
 // Javascript objects to facilitate looking up objects
 const categoryData = []
+const allServices = [];
 let temporaryServices;
+let serviceObject;
+let categoryObject;
 {% for category in site.data.categories %}
+  categoryObject = {
+    name: "{{ category.name }}",
+    page: parseInt("{{ category.page }}"),
+    identifier: "{{ category.identifier }}"
+  };
   temporaryServices = [];
   {% for service in category.services %}
-    temporaryServices.push({
+    serviceObject = {
       name: "{{ service.name }}",
       methodology: "{{ service.methodology }}",
       requirements: "{{ service.requirements }}",
       storage: "{{ service.storage }}",
-      cpt_code: "{{ service.cpt_code }}",
+      cptCode: "{{ service.cpt_code }}",
       time: "{{ service.time }}",
       sub: parseInt("{{ service.sub }}"),
-      identifier: "{{ service.identifier }}"
-    });
+      identifier: "{{ service.identifier }}",
+      category: categoryObject
+    };
+    temporaryServices.push(serviceObject);
+    allServices.push(serviceObject);
   {% endfor %}
 
-  categoryData.push({
-    name: "{{ category.name }}",
-    page: parseInt("{{ category.page }}"),
-    identifier: "{{ category.identifier }}",
-    services: temporaryServices
-  });
+  categoryObject.services = temporaryServices;
+  categoryData.push(categoryObject);
 {% endfor %}
 
 document.addEventListener('DOMContentLoaded', function() {
   const servicesContainer = document.getElementById('services-container');
+  const searchResultsContainer = document.getElementById('search-results');
+
+  // Keyup listener for the services search field
+  const searchFieldElement = document.getElementById('search-field');
+  searchFieldElement.addEventListener('keyup', function(e) {
+    removeAllChildNodes(searchResultsContainer);
+    let searchValue = e.target.value;
+    if (!searchValue || !searchValue.length) {
+      return searchResultsContainer.classList.add('hidden');
+    };
+
+    searchValue = searchValue.toLowerCase();
+    const matchingServices = allServices.filter(s => {
+      if (s.name.toLowerCase().indexOf(searchValue) !== -1) return true;
+      if (s.category.name.toLowerCase().indexOf(searchValue) !== -1) return true;
+
+      return false;
+    });
+
+    // We found matches in the services! We render them on the page
+    if (matchingServices && matchingServices.length) {
+      const resultNumberElement = document.createElement('div');
+      resultNumberElement.classList.add('text-center', 'result-number');
+      resultNumberElement.innerText = generateResultNumberText(matchingServices.length);
+      searchResultsContainer.appendChild(resultNumberElement);
+
+      for (let i = 0; i < matchingServices.length; i++) {
+        const matchingElement = document.createElement('a');
+        matchingElement.classList.add('result-link');
+        matchingElement.href = generateServiceLink(matchingServices[i].category, matchingServices[i]);
+        matchingElement.innerHTML = generateServiceMatchText(matchingServices[i], searchValue);
+        searchResultsContainer.appendChild(matchingElement);
+      }
+    } else {
+      // No matches found :(
+      const noResultsElement = document.createElement('div');
+      noResultsElement.classList.add('text-center', 'no-result');
+      noResultsElement.innerText = 'No Results Found';
+      searchResultsContainer.appendChild(noResultsElement);
+    }
+
+    searchResultsContainer.classList.remove('hidden');
+  });
 
   // In the old version of the website, we used page and sub to navigate
   // to a service. We first try to find an active category and service
@@ -63,7 +130,8 @@ document.addEventListener('DOMContentLoaded', function() {
       return false;
     });
 
-    // Highlight the selected service and display the data :)
+    // Highlight the selected service and display the data
+    // at the bottom of the page :)
     if (activeCategory && activeCategory.services) {
       selectedService = activeCategory.services.find(s => s.sub === parseInt(currentSub)) || activeCategory.services[0];
 
@@ -78,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const storageElement = document.getElementById('storage');
         storageElement.innerText = selectedService.storage;
         const cptCodeElement = document.getElementById('cpt-code');
-        cptCodeElement.innerText = selectedService.cpt_code;
+        cptCodeElement.innerText = selectedService.cptCode;
         const timeElement = document.getElementById('time')
         timeElement.innerText = selectedService.time;
       }
@@ -86,8 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   /*
-   * Highlight the active category HTML element and show the relevant
-   * services on the page
+   * Highlight the active category HTML element
    */
   if (activeCategory) {
     const activeCategoryElement = document.getElementById(`category-${activeCategory.page}-${activeCategory.identifier}`);

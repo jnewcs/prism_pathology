@@ -79,6 +79,10 @@ html, body {
   justify-content: space-around;
 }
 
+.nav-link:focus {
+  text-decoration: underline;
+}
+
 @media(max-width: 991px) {
   .logo-separator {
     height: 20px;
@@ -422,24 +426,10 @@ h3 {
   padding: 5px;
   text-align: center;
   width: 100%;
-}
 
-.result-link:hover {
-  color: #247CFF !important;
-}
-
-.test-box-link {
-  color: #333;
-}
-
-.test-box-link:hover {
-  color: #247CFF;
-  text-decoration: none;
-}
-
-#error_explanation {
-  color: indianred;
-  text-align: center;
+  &:hover, &:focus {
+    color: #247CFF !important;
+  }
 }
 
 .mini-service-box {
@@ -450,7 +440,7 @@ h3 {
   color: #222;
   transition: all .4s ease-in-out 0s;
 
-  &:hover, &.selected {
+  &:hover, &:focus, &.selected {
     transition: all .4s ease-in-out 0s;
     background-color: #2B407C;
     text-decoration: none;

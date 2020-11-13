@@ -1,8 +1,12 @@
-<div class="row align-items-center hidden" id="no-selection-categories">
+<div class="row align-items-center" id="category-picker">
   {% for category in site.data.categories %}
     {% assign url = "/home/services?page=" | append: category.page %}
     <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-      <a class="mini-service-box text-center" href="{{ url | relative_url }}">
+      <a
+        class="mini-service-box text-center category"
+        href="{{ url | relative_url }}"
+        id="category-{{ category.page }}-{{ category.identifier }}"
+      >
         {{ category.name }}
       </a>
     </div>

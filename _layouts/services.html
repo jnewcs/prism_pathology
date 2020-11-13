@@ -9,9 +9,42 @@ layout: default
 
   {% include search.html %}
 
-  <h2 class="text-center mt-3 mb-5">
+  <p class="text-center mt-2 mb-2">
     Browse the categories to learn more about our capabilities.
-  </h2>
+  </p>
 
-  {% include no_selection_categories.html %}
+  {% include category_picker.html %}
+
+  <div id="services-container">
+    <hr />
+
+    <h2 class="light-blue-text pt-3 pb-3 text-center" id="selected-service-header"></h2>
+
+    <details class="text-center">
+      <summary class="mb-3">Switch Test</summary>
+
+      <div class="container">
+        <div class="row align-items-center" id="services-links-container"></div>
+      </div>
+
+      <hr />
+    </details>
+
+    <div class="mb-3">
+      <h4 class="dark-blue-text">Methodology</h4>
+      <div class="mb-3" id="methodology"></div>
+
+      <h4 class="dark-blue-text">Specimen Requirements</h4>
+      <div class="mb-3" id="collection"></div>
+
+      <h4 class="dark-blue-text">Storage and Transport</h4>
+      <div class="mb-3" id="storage"></div>
+
+      <h4 class="dark-blue-text">CPT Code</h4>
+      <div class="mb-3" id="cpt-code"></div>
+
+      <h4 class="dark-blue-text">Turnaround Time</h4>
+      <div class="mb-3" id="time"></div>
+    </div>
+  </div>
 </div>

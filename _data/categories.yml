@@ -1,6 +1,7 @@
 ---
 - name: "Breast Cancer"
   page: 1
+  identifier: 'breast_cancer'
   services:
     - name: "her2 amplification by fish"
       methodology: "HER2 IQFISH pharmDxTM, fluorescence in situ hybridization (FISH)"
@@ -12,6 +13,7 @@
 
 - name: "Colon Cancer"
   page: 2
+  identifier: 'colon_cancer'
   services:
     - name: "kras mutation analysis by pcr"
       methodology: "Therascreen KRAS RGQ PCR, Real-time Polymerase Chain Reaction (PCR)"
@@ -47,6 +49,7 @@
 
 - name: "Gastric Cancer"
   page: 3
+  identifier: 'gastric_cancer'
   services:
     - name: "her2 amplification by fish"
       methodology: "HER2 IQFISH pharmDxTM, fluorescence in situ hybridization (FISH)"
@@ -58,6 +61,7 @@
 
 - name: "Lung Cancer"
   page: 4
+  identifier: 'lung_cancer'
   services:
     - name: "alk rearrangement by fish"
       methodology: "Fluorescence in situ hybridization (FISH)"
@@ -85,6 +89,7 @@
 
 - name: "Melanoma"
   page: 5
+  identifier: 'melanoma'
   services:
     - name: "braf v600 mutation analysis by pcr"
       methodology: "Real-time Polymerase Chain Reaction (PCR)"
@@ -96,6 +101,7 @@
 
 - name: "Molecular Genetic Diseases"
   page: 6
+  identifier: 'molecular_genetic'
   services:
     - name: "factor 5 leiden mutation analysis by pcr"
       methodology: "Polymerase Chain Reaction (PCR)"
@@ -131,6 +137,7 @@
 
 - name: "Hematologic Neoplasms"
   page: 7
+  identifier: 'hematologic'
   services:
     - name: "igh/ccnd1 (bcl1, t(11;14)) by fish"
       methodology: "Fluorescence in situ hybridization (FISH)"
@@ -222,6 +229,7 @@
 
 - name: "Molecular Infectious Diseases"
   page: 8
+  identifier: 'molecular_infectious'
   services:
     - name: "adenovirus, quantitative real-time pcr"
       methodology: "Polymerase Chain Reaction (PCR)"

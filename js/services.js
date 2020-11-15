@@ -44,7 +44,7 @@ let categoryObject;
 {% for category in site.data.categories %}
   categoryObject = {
     name: "{{ category.name }}",
-    page: parseInt("{{ category.page }}"),
+    page: parseInt("{{ category.page }}") || '',
     identifier: "{{ category.identifier }}"
   };
   temporaryServices = [];
@@ -56,7 +56,7 @@ let categoryObject;
       storage: "{{ service.storage }}",
       cptCode: "{{ service.cpt_code }}",
       time: "{{ service.time }}",
-      sub: parseInt("{{ service.sub }}"),
+      sub: parseInt("{{ service.sub }}") || '',
       identifier: "{{ service.identifier }}",
       category: categoryObject
     };
@@ -69,8 +69,13 @@ let categoryObject;
 {% endfor %}
 
 document.addEventListener('DOMContentLoaded', function() {
-  const servicesContainer = document.getElementById('services-container');
   const searchResultsContainer = document.getElementById('search-results');
+
+  // We want to hide the selected services elements on the page
+  function hideSelectedService() {
+    const servicesContainer = document.getElementById('services-container');
+    servicesContainer.classList.add('hidden');
+  }
 
   // Keyup listener for the services search field
   const searchFieldElement = document.getElementById('search-field');
@@ -119,10 +124,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // through this method
   const currentPage = getUrlParameter('page');
   const currentSub = getUrlParameter('sub');
-  const currentCategoryIdentifier = getUrlParameter('identifer');
+  const currentCategoryIdentifier = getUrlParameter('identifier');
   let activeCategory;
   let selectedService;
-  if (currentPage) {
+  if (currentPage || currentCategoryIdentifier) {
     activeCategory = categoryData.find(c => {
       if (c.page === parseInt(currentPage)) return true;
       if (c.identifier && c.identifier === currentCategoryIdentifier) return true;
@@ -165,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
     /*
      * Render the relevant services on the page
      */
-    if (activeCategory.services) {
+    if (activeCategory.services && activeCategory.services.length) {
       const servicesLinksContainer = document.getElementById('services-links-container');
       for (let i = 0; i < activeCategory.services.length; i++) {
         const serviceContainerElement = document.createElement('div');
@@ -182,9 +187,12 @@ document.addEventListener('DOMContentLoaded', function() {
         serviceContainerElement.appendChild(serviceLinkElement);
         servicesLinksContainer.appendChild(serviceContainerElement);
       }
+    } else {
+      hideSelectedService();
+      const noServicesContainer = document.getElementById('no-services-container');
+      noServicesContainer.classList.remove('hidden');
     }
   } else {
-    // We want to hide the selected services elements on the page
-    servicesContainer.classList.add('hidden');
+    hideSelectedService();
   }
 });

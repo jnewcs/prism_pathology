@@ -53,11 +53,11 @@ fields:
       label: CPT Code
       config:
         required: true
-    - type: datetime
-      name: time
-      label: Turnaround Time
+    - name: time
+      type: text
       config:
         required: true
+      label: Turnaround Time
     - name: identifier
       type: text
       config:

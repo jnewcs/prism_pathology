@@ -310,40 +310,34 @@ h3 {
   margin: 10px 0px !important;
 }
 
-.button-index, .button {
+.button-index {
   text-align: center;
   width: 150px;
   background-color: #247CFF;
   color: white;
-  opacity: .8;
+  opacity: 0.75;
   font-size: 15px;
   padding: 10px;
   margin: 10px auto;
   display: block;
-  -webkit-transition: opacity, all ease-out 1s;
-  -moz-transition: opacity, all ease-out 1s;
-  -o-transition: opacity, all ease-out 1s;
-  transition: opacity, all ease-out 1s;
-}
+  -webkit-transition: opacity, all ease-out 0.5s;
+  -moz-transition: opacity, all ease-out 0.5s;
+  -o-transition: opacity, all ease-out 0.5s;
+  transition: opacity, all ease-out 0.5s;
 
-.button-index:hover, .button:hover {
-  text-decoration: none;
-  color: white;
-  -webkit-transition: opacity, all ease-in 1s;
-  -moz-transition: opacity, all ease-in 1s;
-  -o-transition: opacity, all ease-in 1s;
-  transition: opacity, all ease-in 1s;
-  opacity: 1;
-}
+  &:hover, &:focus {
+    text-decoration: none;
+    color: white;
+    -webkit-transition: opacity, all ease-in 0.5s;
+    -moz-transition: opacity, all ease-in 0.5s;
+    -o-transition: opacity, all ease-in 0.5s;
+    transition: opacity, all ease-in 0.5s;
+    opacity: 1;
+  }
 
-.button:hover {
-  background-color: #333;
-}
-
-.btn-primary {
-  font-size: 25px !important;
-  background-color: #247CFF !important;
-  opacity: 0.8;
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 .bio {

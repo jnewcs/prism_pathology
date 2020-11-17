@@ -40,3 +40,5 @@ fields:
   name: description
   label: description
   hidden: true
+pages:
+- _data/general.yml

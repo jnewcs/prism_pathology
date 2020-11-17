@@ -4,11 +4,11 @@ layout: default
 <div class="container mb-5">
   <h1 class="contact-header light-blue-text text-center mt-3">Contact Us</h1>
   <div class="top-info">
-    <h2 class="text-center"><i>{{ site.phone }}</i></h2>
+    <h2 class="text-center"><i>{{ site.data.general.phone }}</i></h2>
   </div>
   <div class="col-md-12 bottom-info bottom-info-email text-center">
-    <a href="mailto:{{ site.email }}">
-      {{ site.email }}
+    <a href="mailto:{{ site.data.general.email }}">
+      {{ site.data.general.email }}
     </a>
   </div>
 
@@ -22,9 +22,9 @@ layout: default
     <div class="col-md-6">
       <div class="text-center bottom-info mb-3"><b>Office Hours</b></div>
       <p class="text-center">
-        {{ site.office_days }}
+        {{ site.data.general.office_days }}
         <br>
-        {{ site.office_hours }}
+        {{ site.data.general.office_hours }}
       </p>
     </div>
   </div>

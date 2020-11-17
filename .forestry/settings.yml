@@ -5,6 +5,10 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
+  path: _data/general.yml
+  label: Site Info
+  match: "**/*"
+- type: document
   path: _data/people.yml
   label: People
 - type: document

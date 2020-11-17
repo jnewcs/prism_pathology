@@ -24,3 +24,5 @@ fields:
     label: photo
   config:
     labelField: name
+pages:
+- _data/people.yml

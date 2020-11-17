@@ -8,12 +8,12 @@ fields:
   fields:
   - type: text
     name: name
-    label: name
+    label: Name
     config:
       required: true
   - type: text
     name: identifier
-    label: identifier
+    label: Identifier
     config:
       required: true
     description: Unique name for category. This field gets used to generate a persistent

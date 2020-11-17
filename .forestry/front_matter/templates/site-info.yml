@@ -1,0 +1,28 @@
+---
+label: Site Info
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: number
+  name: year
+  label: year
+- type: text
+  name: email
+  label: email
+- type: text
+  name: phone
+  label: phone
+- type: text
+  name: office_days
+  label: office_days
+- type: datetime
+  name: office_hours
+  label: office_hours
+- type: file
+  name: logo
+  label: logo
+- type: textarea
+  name: description
+  label: description

@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // In the old version of the website, we used page and sub to navigate
   // to a service. We first try to find an active category and service
-  // through this method
+  // through this method, then fallback to identifiers
   const currentPage = getUrlParameter('page');
   const currentSub = getUrlParameter('sub');
   const currentCategoryIdentifier = getUrlParameter('identifier');

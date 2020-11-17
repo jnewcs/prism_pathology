@@ -16,8 +16,8 @@ fields:
     label: Identifier
     config:
       required: true
-    description: Unique name for category. This field gets used to generate a persistent
-      URL that you can link to someone.<br><br><a href="https://www.prismpathology.com/home/services?identifer=gastric_cancer"
+    description: <strong>Unique name for category</strong>. This field gets used to
+      generate a persistent URL that you can link to someone.<br><br><a href="https://www.prismpathology.com/home/services?identifer=gastric_cancer"
       title="https://www.prismpathology.com/home/services?identifer=gastric_cancer"
       target="_blank">https://www.prismpathology.com/home/services?identifer=gastric_cancer</a><br><br>^
       This is an example of the category identifier being used.
@@ -30,22 +30,44 @@ fields:
     fields:
     - type: text
       name: name
-      label: name
+      label: Name
+      config:
+        required: true
     - type: text
       name: methodology
-      label: methodology
+      label: Methodology
+      config:
+        required: true
     - type: textarea
       name: requirements
-      label: requirements
+      label: Specimen Requirements
+      config:
+        required: true
     - type: text
       name: storage
-      label: storage
+      label: Storage and Transport
+      config:
+        required: true
     - type: text
       name: cpt_code
-      label: cpt_code
+      label: CPT Code
+      config:
+        required: true
     - type: datetime
       name: time
-      label: time
+      label: Turnaround Time
+      config:
+        required: true
+    - name: identifier
+      type: text
+      config:
+        required: false
+      label: Identifier
+      description: '<strong>Unique name for category</strong>. This field gets used
+        to generate a persistent URL that you can link to someone.<br><br><a href="https://www.prismpathology.com/home/services?identifier=colon_cancer&amp;service_identifier=kras_pcr"
+        title="https://www.prismpathology.com/home/services?identifier=colon_cancer&amp;service_identifier=kras_pcr"
+        target="_blank">https://www.prismpathology.com/home/services?identifier=colon_cancer&amp;service_identifier=kras_pcr</a><br><br>^
+        This is an example of the category identifier being used.  '
     - type: number
       name: sub
       label: sub

@@ -5,11 +5,14 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: _data/people.yml
-  label: People
+  path: _data/general.yml
+  label: Site Info
 - type: document
   path: _data/categories.yml
   label: Categories & Services
+- type: document
+  path: _data/people.yml
+  label: People
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
@@ -22,6 +25,5 @@ build:
   install_dependencies_command: bundle install --path vendor/bundle
   preview_docker_image: forestryio/ruby:2.6
   mount_path: "/srv"
-  working_dir: "/srv"
   instant_preview_command: bundle exec jekyll serve --drafts --unpublished --future
-    -d _site
+    --port 8080 --host 0.0.0.0 -d _site

@@ -1,0 +1,44 @@
+---
+label: Site Info
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: number
+  name: year
+  label: Year
+  config:
+    required: true
+    step: 1
+- type: text
+  name: email
+  label: Email
+  config:
+    required: true
+- type: text
+  name: phone
+  label: Phone
+  config:
+    required: true
+- type: text
+  name: office_days
+  label: Office Days
+  config:
+    required: true
+- name: office_hours
+  type: text
+  config:
+    required: true
+  label: Office Hours
+- type: file
+  name: logo
+  label: Logo
+- type: textarea
+  name: description
+  label: description
+  hidden: true
+pages:
+- _data/general.yml

@@ -14,7 +14,8 @@ function getUrlParameter(name) {
 function generateServiceLink(category, service) {
   const categoryParams = `page=${category.page}&identifier=${category.identifier}`;
   const serviceParams = `sub=${service.sub}&service_identifier=${service.identifier}`;
-  return `/home/services?${categoryParams}&${serviceParams}`;
+  const baseUrl = window.location.href.split('?')[0];
+  return `${baseUrl}?${categoryParams}&${serviceParams}`;
 }
 
 function removeAllChildNodes(parent) {

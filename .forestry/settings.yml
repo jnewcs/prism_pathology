@@ -10,7 +10,6 @@ sections:
 - type: document
   path: _data/categories.yml
   label: Categories & Services
-  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''

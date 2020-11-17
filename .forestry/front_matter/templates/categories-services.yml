@@ -1,0 +1,42 @@
+---
+label: Categories & Services
+hide_body: true
+fields:
+- type: field_group_list
+  name: Categories
+  label: Categories
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: number
+    name: page
+    label: page
+  - type: text
+    name: identifier
+    label: identifier
+  - type: field_group_list
+    name: services
+    label: services
+    fields:
+    - type: text
+      name: name
+      label: name
+    - type: text
+      name: methodology
+      label: methodology
+    - type: textarea
+      name: requirements
+      label: requirements
+    - type: text
+      name: storage
+      label: storage
+    - type: text
+      name: cpt_code
+      label: cpt_code
+    - type: datetime
+      name: time
+      label: time
+    - type: number
+      name: sub
+      label: sub

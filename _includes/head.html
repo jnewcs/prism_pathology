@@ -2,6 +2,12 @@
   <title>{{ site.data.general.title }}</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if page.seo_title %}
+    <meta property="og:title" content="{{ page.seo_title }}" />
+  {% endif %}
+  {% if page.seo_description %}
+    <meta name="description" content="{{ page.seo_description }}" />
+  {% endif %}
   <link rel="shortcut icon" href="{{ '/uploads/favicon.ico' | relative_url }}" />
   <link
     rel="stylesheet"

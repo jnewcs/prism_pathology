@@ -16,4 +16,6 @@ help_items:
   - description: "Meet our professional team of highly qualified pathologists and scientists."
     link_text: "Meet Us"
     link_url: "/home/about"
+seo_title: "Prism Pathology"
+seo_description: "Prism Pathology is a molecular pathology laboratory committed to offering rapid and accurate diagnostic and prognostic testing to help physicians and patients make precise treatment decisions."
 ---

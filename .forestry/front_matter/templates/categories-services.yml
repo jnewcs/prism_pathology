@@ -50,3 +50,5 @@ fields:
     - type: number
       name: sub
       label: sub
+pages:
+- _data/categories.yml

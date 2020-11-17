@@ -7,9 +7,6 @@ sections:
 - type: document
   path: _data/people.yml
   label: People
-- type: jekyll-pages
-  label: Pages
-  create: all
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''

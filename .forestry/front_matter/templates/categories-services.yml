@@ -9,12 +9,22 @@ fields:
   - type: text
     name: name
     label: name
-  - type: number
-    name: page
-    label: page
+    config:
+      required: true
   - type: text
     name: identifier
     label: identifier
+    config:
+      required: true
+    description: Unique name for category. This field gets used to generate a persistent
+      URL that you can link to someone.<br><br>This is an example of the identifier
+      being used:<br><br><a href="http://www.prismpathology.com/home/services?identifer=gastric_cancer"
+      title="http://www.prismpathology.com/home/services?identifer=gastric_cancer"
+      target="_blank">http://www.prismpathology.com/home/services?identifer=gastric_cancer</a>
+  - type: number
+    name: page
+    label: page
+    hidden: true
   - type: field_group_list
     name: services
     label: services

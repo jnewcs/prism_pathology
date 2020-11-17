@@ -17,9 +17,9 @@ fields:
     config:
       required: true
     description: Unique name for category. This field gets used to generate a persistent
-      URL that you can link to someone.<br><br><a href="http://www.prismpathology.com/home/services?identifer=gastric_cancer"
-      title="http://www.prismpathology.com/home/services?identifer=gastric_cancer"
-      target="_blank">http://www.prismpathology.com/home/services?identifer=gastric_cancer</a>  <br><br>^
+      URL that you can link to someone.<br><br><a href="https://www.prismpathology.com/home/services?identifer=gastric_cancer"
+      title="https://www.prismpathology.com/home/services?identifer=gastric_cancer"
+      target="_blank">https://www.prismpathology.com/home/services?identifer=gastric_cancer</a><br><br>^
       This is an example of the identifier being used.
   - type: number
     name: page

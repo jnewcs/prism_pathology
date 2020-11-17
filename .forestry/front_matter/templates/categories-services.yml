@@ -50,6 +50,6 @@ fields:
       name: sub
       label: sub
       hidden: true
-    label: Services Associated to This Category
+    label: Services
 pages:
 - _data/categories.yml

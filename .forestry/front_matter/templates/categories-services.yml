@@ -27,7 +27,6 @@ fields:
     hidden: true
   - type: field_group_list
     name: services
-    label: services
     fields:
     - type: text
       name: name
@@ -50,5 +49,7 @@ fields:
     - type: number
       name: sub
       label: sub
+      hidden: true
+    label: Services Associated to This Category
 pages:
 - _data/categories.yml

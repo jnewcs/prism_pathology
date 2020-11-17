@@ -20,7 +20,7 @@ fields:
       URL that you can link to someone.<br><br><a href="https://www.prismpathology.com/home/services?identifer=gastric_cancer"
       title="https://www.prismpathology.com/home/services?identifer=gastric_cancer"
       target="_blank">https://www.prismpathology.com/home/services?identifer=gastric_cancer</a><br><br>^
-      This is an example of the identifier being used.
+      This is an example of the category identifier being used.
   - type: number
     name: page
     label: page

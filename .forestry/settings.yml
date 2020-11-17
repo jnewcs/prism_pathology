@@ -5,15 +5,14 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: _data/general.yml
-  label: Site Info
-  match: "**/*"
-- type: document
   path: _data/people.yml
   label: People
 - type: document
   path: _data/categories.yml
   label: Categories & Services
+- type: document
+  path: _data/general.yml
+  label: Site Info
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
